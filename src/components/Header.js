@@ -12,8 +12,8 @@ const Header = () => {
 
       <div>Header</div>
       
-      <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer flex gap-2 items-center ">
-        <BsBag /> <span className="rounded-[50%] bg-red-600 w-[20px] h-[20px] text-white flex items-center justify-center">{cart.length}</span>
+      <div onClick={() => setIsOpen(!isOpen)} className="relative cursor-pointer flex items-center w-[30px] h-[30px]">
+        <BsBag className="text-xl" /> <p className=" absolute top-0 right-1 rounded-[50%] bg-pink-400 w-[15px] h-[15px] text-white text-[10px] flex items-center justify-center">{cart.length}</p>
       </div>
 
     </header>
