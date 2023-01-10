@@ -8,7 +8,7 @@ const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext)
   const { cart } = useContext(CartContext)
   return (
-    <header className="bg-pink-200 fixed z-50 w-full">
+    <header className="bg-white shadow-xl fixed z-50 w-full p-2">
 
       <div>Header</div>
       

@@ -23,7 +23,8 @@ const Sidebar = () => {
   const { cart } = useContext(CartContext)
 
   return (
-    <div className={` ${isOpen ? 'bottom-0' : '-bottom-full'} w-full h-screen  md:h-3/5 bg-white bottom-0 fixed shadow-2xl transition-all duration-300 z-50 px-4 lg:px-[35px]`}>
+    // <div className={` ${isOpen ? 'bottom-0' : '-bottom-full'} w-full h-screen bg-white bottom-0 fixed shadow-2xl transition-all duration-300 z-50 px-4 lg:px-[35px]`}>
+    <div className={` ${isOpen ? 'right-0' : '-right-full'} fixed top-0 right-0 z-50 w-full h-full lg:w-4/12 bg-white shadow-2xl transition-all duration-300 px-3 `}>
       
       <div className='flex items-center justify-between py-6 border-b'>
 
