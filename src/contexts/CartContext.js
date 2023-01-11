@@ -30,10 +30,35 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  // remove from cart
+  const removeFromCart = (id) => {
+    const newCart  = cart.filter(item => {
+      return(item.id !== id);
+    });
+
+    setCart(newCart);
+  };
+
+  // clear cart
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  // increment amount
+  const increaseAmount = (id) => {
+    const item  = cart.find(item => item.id === id);
+    addToCart( item, id);
+  }
+  // decrement cart
+  const decreaseAmount = (id, amount) => {
+    const item  = cart.find(item => item.id === id);
+    removeFromCart(item, id)
+  }
+
   console.log(cart);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, increaseAmount, decreaseAmount }}>
       {children}
     </CartContext.Provider>
   );
