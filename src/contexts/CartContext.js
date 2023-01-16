@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 
 // create context
 export const CartContext = createContext()
@@ -50,9 +50,8 @@ const CartProvider = ({ children }) => {
     addToCart( item, id);
   }
   // decrement cart
-  const decreaseAmount = (id, amount) => {
-    const item  = cart.find(item => item.id === id);
-    removeFromCart(item, id)
+  const decreaseAmount = (id) => {
+    console.log("Clicked!!")
   }
 
   console.log(cart);
